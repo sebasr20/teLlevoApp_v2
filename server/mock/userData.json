@@ -1,0 +1,29 @@
+{
+"userData": [{
+    "user_id": "1",
+    "name": "Sebastian Soto",
+    "email": "ssoto@veteranbytes.cl",
+    "username": "ssoto",
+    "password": "123456",
+    "token": "084627b29261fc50f9fd3f3ebc029da",
+    "avatar": "https://reqres.in/img/faces/1-image.jpg"
+    },
+    {
+    "user_id": "2",
+    "name": "Gonzalo Tapia",
+    "email": "gtapia@veteranbytes.cl",
+    "username": "gtapia",
+    "password": "123456",
+    "token": "096889sdas9261fc50f9fd3f3ebc029da",
+    "avatar": "https://reqres.in/img/faces/5-image.jpg"
+    },
+    {
+    "user_id": "3",
+    "name": "Andres Vergara",
+    "email": "avergara@veteranbytes.cl",
+    "username": "avergara",
+    "password": "123456",
+    "token": "08787gfh27b29261fc50f9fd3fghebc029da",
+    "avatar": "https://reqres.in/img/faces/6-image.jpg"
+    }]
+}

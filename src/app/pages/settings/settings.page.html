@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfíl</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-avatar>
+      <img src="{{ displayUserData?.avatar }}" alt="">
+    </ion-avatar>
+    <ion-item lines="none">
+      <h2>{{ displayUserData?.name }}</h2>
+    </ion-item>
+    <ion-item lines="full">
+      <h3>{{ displayUserData?.email }}</h3>
+    </ion-item>
+
+    <div class="center">
+      <ion-button color="warning" (click)="logoutAction()">Cerrar Sesión</ion-button>
+    </div>
+    
+  
+
+</ion-content>

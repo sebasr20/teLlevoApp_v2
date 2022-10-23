@@ -1,0 +1,66 @@
+{
+"viajes": [
+	{
+    "user_id": "1",
+    "name": "Matias Vega",
+	"avatar": "https://reqres.in/img/faces/5-image.jpg",
+    "route": "Placilla",
+    "available": "2",
+    "price": "3000",
+	"departure": "22:30"
+    },
+    {
+    "user_id": "2",
+    "name": "Claudia Torres",
+	"avatar": "https://reqres.in/img/faces/5-image.jpg",
+    "route": "Quilpué",
+    "available": "1",
+    "price": "2000",
+	"departure": "22:00"
+    },
+    {
+    "user_id": "3",
+    "name": "Daniela Ramírez",
+	"avatar": "https://reqres.in/img/faces/5-image.jpg",
+    "route": "Villa Alemana",
+    "available": "3",
+    "price": "2000",
+	"departure": "21:45"
+    },
+	{
+    "user_id": "4",
+    "name": "Fernando Muñoz",
+	"avatar": "https://reqres.in/img/faces/5-image.jpg",
+    "route": "Gomez Carreño",
+    "available": "2",
+    "price": "1000",
+	"departure": "21:30"
+    },
+	{
+    "user_id": "5",
+    "name": "Oscar Huerta",
+	"avatar": "https://reqres.in/img/faces/5-image.jpg",
+    "route": "Con-Cón",
+    "available": "3",
+    "price": "3500",
+	"departure": "21:30"
+    },
+	{
+    "user_id": "6",
+    "name": "Mónica Lopez",
+	"avatar": "https://reqres.in/img/faces/5-image.jpg",
+    "route": "Placeres",
+    "available": "4",
+    "price": "1500",
+	"departure": "21:00"
+    },
+	{
+    "user_id": "7",
+    "name": "Sebastian Soto",
+	"avatar": "https://reqres.in/img/faces/5-image.jpg",
+    "route": "Miraflores",
+    "available": "4",
+    "price": "1000",
+	"departure": "21:00"
+    }]
+}
