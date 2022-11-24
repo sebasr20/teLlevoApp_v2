@@ -4,22 +4,20 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
 
     <ion-avatar>
-      <img src="{{ displayUserData?.avatar }}" alt="">
+      <img src="https://reqres.in/img/faces/1-image.jpg" alt="">
     </ion-avatar>
     <ion-item lines="none">
-      <h2>{{ displayUserData?.name }}</h2>
+      <h4>Bienvenido: {{ displayUserData.name }}</h4>
     </ion-item>
     <ion-item lines="full">
-      <h3>{{ displayUserData?.email }}</h3>
+      <h5>{{ displayUserData.email }}</h5>
     </ion-item>
 
     <div class="center">
-      <ion-button color="warning" (click)="logoutAction()">Cerrar Sesión</ion-button>
+      <ion-button color="warning" (click)="salir()">Cerrar Sesión</ion-button>
     </div>
-    
-  
 
 </ion-content>

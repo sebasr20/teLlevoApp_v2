@@ -9,22 +9,22 @@
     <app-logo></app-logo>
     <h1>Iniciar Sesión</h1>
   </div>
-  <form>
+  <form [formGroup]="formularioLogin" (keyup.enter)="ingresar()">
     <ion-list>
       <ion-item>
         <ion-label position="stacked">Email</ion-label>
-        <ion-input autocomplete="off" name="email" type="text" [(ngModel)]="postData.email"></ion-input>
+        <ion-input autocomplete="off" formControlName="email" type="text"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="stacked">Password</ion-label>
-        <ion-input autocomplete="off" name="password" type="password" [(ngModel)]="postData.password"></ion-input>
+        <ion-input autocomplete="off" formControlName="password" type="password"></ion-input>
       </ion-item>
 
       <ion-item lines="none">
         <a routerLink="/signup">Crear una Cuenta</a>
       </ion-item>
-      <ion-button expand="block" color="primary" (click)="loginAction()">Iniciar Sesión</ion-button>
+      <ion-button expand="block" color="primary" (click)="ingresar()">Iniciar Sesión</ion-button>
     </ion-list>
   </form>
   

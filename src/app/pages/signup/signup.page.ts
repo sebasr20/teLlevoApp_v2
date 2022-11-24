@@ -4,6 +4,8 @@ import { StorageService } from 'src/app/services/storage.service';
 import { ToastService } from 'src/app/services/toast.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { AuthConstants } from 'src/app/config/auth.constants';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-signup',
@@ -11,6 +13,10 @@ import { AuthConstants } from 'src/app/config/auth.constants';
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
+  [x: string]: any;
+
+  formularioRegistro: FormGroup;
+
   postData = {
     name: '',
     username: '',
@@ -21,10 +27,52 @@ export class SignupPage implements OnInit {
     private authService: AuthService,
     private toastService: ToastService,
     private storageService: StorageService,
-    private router: Router
-  ) { }
+    private router: Router,
+    public fb: FormBuilder,
+    public alertController: AlertController,
+    public navCtrl: NavController
+  ){
+    this.formularioRegistro = this.fb.group({
+      'name': new FormControl("", Validators.required),
+      'username':new FormControl("", Validators.required),
+      'email':new FormControl("", Validators.required),
+      'password':new FormControl("", Validators.required),
+
+    })
+   }
+
 
   ngOnInit() {
+  }
+
+  async guardar(){
+    var f = this.formularioRegistro.value;
+
+    if(this.formularioRegistro.invalid){
+      const alert = await this.alertController.create({
+        header: 'Datos incompletos',
+        message: 'Debe completar todos los datos para registrarse',
+        buttons: ['Aceptar']
+      });
+  
+      await alert.present();
+      return;
+    }
+
+    var usuario = {
+      email: f.email,
+      password: f.password,
+      name: f.name
+    }
+
+    localStorage.setItem('usuario',JSON.stringify(usuario));
+    const alert = await this.alertController.create({
+        header: 'Información de Registro',
+        message: 'Usuario registrado exitosamente.',
+        buttons: ['Aceptar']
+      });
+    await alert.present();
+    this.navCtrl.navigateRoot('login');
   }
 
   validateInputs() {

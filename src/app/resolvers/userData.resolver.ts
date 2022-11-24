@@ -10,7 +10,7 @@ export class UserDataResolver{
     constructor(private authService: AuthService){}
 
     resolve(){
-        console.log('Calls a home route');
+        //console.log('Calls a home route');
         return this.authService.getUserData();
     }
 }
